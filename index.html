@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta content="width=device-width, initial-scale=1 maximum-scale=1.0 user-scalable=no">
+
+  <link rel="stylesheet" href="style.css"></link>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Permanent+Marker" rel="stylesheet">
+  
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  
+  
+  <title>Street Shifumi</title>
+
+</head>
+<body class="splash-screen load">
+  
+
+    <div class="title">
+        <h1 class="title-bottom"><span class="big">S</span>treet <span class="big">S</span>hifumi</h1>
+      </div>
+
+
+
+  <!-- main section -->
+  <section class="col-lg-12 col-md-12 col-sm-12 d-flex mt-5">
+
+    <!-- left section (img + animations) -->
+      <div class="col-lg-9 col-md-9 col-sm-9 ml-4 battlezone">
+          <img id="battle" src="sf2-02-ken.jpg" alt="SF background">
+          <img id="ken" src="ken.gif"></img>
+          <img id="ruy" src="ruy2.gif"></img>
+      </div>
+
+
+    <!-- right section (ranked) -->
+      <div class="col-lg-3 col-md-3 col-sm-3 ranked text-center">
+        <h3>Ladder</h3>
+      </div>
+
+  </section>
+
+
+
+  <!-- button section -->
+  <section class="d-flex flex-column text-center grey-with-red">
+      <a class="text-center mt-4 mb-1 btn menu">Start</a>
+    <a class="text-center mt-1 mb-1 btn menu"  data-toggle="modal" data-target="#exampleModal">How to play</a>
+  </section>
+
+
+
+
+
+
+
+<!-- PARTIE JS BACK -->
+
+  <div>
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <div class="final_result" id="result3"></div>
+  </div>
+
+  
+
+
+
+<!-- MODAL -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="yellow-with-darkyellow" id="exampleModalLabel">How to play</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body yellow-with-darkyellow">
+            * For better experience use Google Chrome
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!-- LIFE BARRE -->
+<!-- Left bar -->
+  <div class="progress border rounded" style=" 
+  background-color: transparent;
+  height: 3%;
+  width: 19% ;
+  border-radius: 0 ;
+  position: absolute ;
+  Top: 35% ;
+  left: 16.8% ;
+  box-sizing: border-box;
+  transform: rotate(180deg);
+  ">
+    <div class="progress-bar-orange" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="15" style="display: block; float: right;"></div>
+
+    <div class="progress-bar-red" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"></div>
+  </div>
+
+<!-- Right bar -->
+  <div class="progress border rounded" style=" 
+  background-color: transparent;
+  height: 3%;
+  width: 19% ;
+  border-radius: 0 ;
+  position: absolute ;
+  Top: 35% ;
+  left: 38.8% ;
+  box-sizing: border-box;
+  float: right;
+  ">
+    <div class="progress-bar-orange" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="95" style="display: block; float: right;"></div>
+
+    <div class="progress-bar-red" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="5">
+    </div>
+  </div>
+
+
+<!-- K.O -->
+  <div class="progress border-0" style=" 
+  background-color: transparent;
+  height: 3%;
+  width: 3.45% ;
+  border-radius: 0 ;
+  position: absolute ;
+  Top: 35% ;
+  left: 35.6% ;
+  box-sizing: border-box;
+  float: right;">
+    <div class="ko-back" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+    </div>
+  </div>
+  <div class="ko-box">
+    <span class="ko">KO</span>
+  </div>
+
+
+
+
+
+
+
+  <a class="yellow-with-darkyellow mb-2 credit">Credit: 5</a>
+
+
+
+
+
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+
+</body>
+<footer>
+    <!-- footer section -->
+    <section class="text-center">
+        <a href="mailto:jonathanlutzbusiness@gmail.com">
+            <span class="yellow">©</span>
+        <a href="mailto:jonathanlutzbusiness@gmail.com" class="yellow-with-darkyellow mb-2">Made with &hearts; by CocoTheDev</a>
+    </section>
+</footer>
+
+</html>
+

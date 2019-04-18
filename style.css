@@ -1,0 +1,275 @@
+
+.final_result {
+  font-weight: 1000;
+}
+
+.splash-screen {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: absolute;
+  color: white !important;
+  background-color: black !important;
+  font-family: "Press Start 2P", monospace !important;
+  font-size: 1vw !important;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding:0;
+  min-height: 100%;
+}
+
+body:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: repeating-linear-gradient(#0D122B, #0D122B 2px, #565B73 2px, #565B73 4px) !important;
+  opacity: 0.2 !important;
+  z-index: 100;
+  content: "";
+  pointer-events: none;
+  min-height: 100%;
+  margin:0;
+  padding:0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+footer::-webkit-textfield-decoration-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.menu {
+  font-size: 1vw !important;
+}
+
+.title {
+  margin-top: 3%;
+  font-family: "Permanent Marker", monospace !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 20vh;
+}
+
+.title-top {
+  transform: skew(-10deg) rotate(-10deg) translateX(-2rem) !important;
+}
+
+.title-bottom {
+  transform: skew(-10deg) rotate(-10deg) translateX(1rem) !important;
+}
+
+.credit {
+  margin-top: 10px;
+  margin-right: 5px;
+  pointer-events: none;
+  position: fixed;
+  position: absolute;
+  right: 0;
+}
+
+
+/* TYPO */
+h1 {
+  background: -webkit-linear-gradient(rgb(255, 18, 18) 30%, rgb(255, 215, 38)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+h3 {
+  background: -webkit-linear-gradient(rgb(255, 18, 18) 30%, rgb(255, 215, 38)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  font-size: 2vw !important;
+}
+
+h5 {
+  color: #bdbdbd !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1vw;
+}
+
+/* BUTTONS */
+button {
+  position: absolute;
+  height: 4%;
+  width: 4%;
+  top: 62%;
+}
+
+#rock {
+left: 30%;
+
+}
+
+#paper {
+left: 35%;
+}
+
+#scissors {
+left: 40%;
+}
+
+
+
+
+/* BATTLE ZONE */
+.battlezone {
+  position: relative;
+}
+
+#battle {
+  height: auto;
+  width: 70%;
+  margin-left: 12%; 
+}
+
+#ken {
+  height: 45%;
+  width: auto;
+  position: absolute;
+  Top: 36%;
+  Left: 30%;
+}
+
+#ruy {
+  height: 45%;
+  width: auto;
+  position: absolute;
+  Top: 36%;
+  left: 58%;
+}
+
+/* LADDER */
+.ranked {
+  width: auto !important;
+  margin-right: 13%;
+  margin-left: -13%;
+  border-color: rgb(226, 179, 24) !important;
+  border: solid 6px;
+}
+
+/* LIFE BAR */
+.progress-bar-orange{
+  background-color: rgb(255, 238, 0);
+  width: 95% ;
+}
+
+.progress-bar-red{
+  background-color: rgb(255, 0, 0) ;
+  width: 5% ;
+}
+
+.ko-box {
+  position: absolute ;
+  Top: 34.7%;
+  left: 35.9%;
+}
+
+.ko {
+  text-shadow: -4px 0 rgb(36, 12, 102), 0 4px rgb(30, 2, 105),
+  4px 0 rgb(30, 2, 105), 0 -4px rgb(30, 2, 105);
+  font-size: 1.5vw;
+}
+
+.ko-back{
+  background-color: rgb(255, 0, 0) ;
+  width: 100% ;
+}
+
+/* COLORS */
+.grey-with-red {
+  color: rgb(192, 192, 192) !important;
+  text-shadow: 2px 2px 0 rgb(192, 11, 11) !important;
+}
+
+.purple-with-blue, .btn:hover {
+  color: rgb(147, 154, 255) !important;
+  text-shadow: 2px 2px 0 rgb(47, 61, 255) !important;
+}
+
+.yellow-with-darkyellow {
+  color: rgb(226, 179, 24) !important;
+  text-shadow: 0 2px 0 rgb(107, 77, 11), 2px 0 0 rgb(151, 109, 19),
+    2px 2px 0 rgb(151, 109, 19) !important;
+}
+
+.yellow {
+  color: rgb(226, 179, 24) !important;
+}
+
+
+/* JQUERY EFFECT */
+@media (min-width: 400px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  .big {
+    font-size: 7rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .big {
+    font-size: 9rem;
+  }
+
+  .title {
+    font-size: 3rem;
+
+  }
+
+  .buttons {
+    height: 40vh;
+  }
+
+  .title-top {
+    transform: skew(-10deg) rotate(-10deg) translateX(-2rem);
+  }
+
+  .title-bottom {
+    transform: skew(-10deg) rotate(-10deg) translateX(3rem);
+  }
+}
+
+@media (min-width: 800px) {
+  .credit {
+    position: absolute;
+    right: 50px;
+    margin-top: 0;
+  }
+}
+
+.load {
+  animation: load 800ms 500ms backwards;
+}
+
+@keyframes load {
+  0% {
+    filter: blur(2px) hue-rotate(-150deg);
+  }
+}
+
+::selection {
+  background: #b4fdff !important;
+}
+
+::-moz-selection {
+  background: #b4fdff !important;
+}
