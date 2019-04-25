@@ -48,6 +48,12 @@ footer::-webkit-textfield-decoration-container {
   width: 100%;
 }
 
+.contact{
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+}
+
 .menu {
   font-size: 1vw !important;
 }
@@ -104,7 +110,8 @@ a {
   font-size: 1vw;
 }
 
-/* BUTTONS */
+
+/* BUTTONS GAME */
 button {
   position: absolute;
   height: 4%;
@@ -114,7 +121,6 @@ button {
 
 #rock {
 left: 30%;
-
 }
 
 #paper {
@@ -232,7 +238,6 @@ left: 40%;
 
   .title {
     font-size: 3rem;
-
   }
 
   .buttons {
