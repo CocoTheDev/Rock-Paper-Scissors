@@ -128,7 +128,6 @@ button {
 button:hover {
   border-bottom: rgb(47, 61, 255) solid 2px;
   border-right: rgb(47, 61, 255) solid 2px;
-  
   opacity: 1;
 }
 
@@ -138,11 +137,11 @@ button:hover {
 }
 
 #rock {
-top: 45%;
+  top: 45%;
 }
 
 #paper {
-top: 50%;
+  top: 50%;
 }
 
 #scissors {
@@ -212,6 +211,12 @@ top: 50%;
 .ko-back{
   background-color: rgb(255, 0, 0) ;
   width: 100% ;
+}
+
+.modal-back {
+  background-color: black !important;
+  background: repeating-linear-gradient(#0D122B, #0D122B 2px, #565B73 2px, #565B73 4px) !important;
+  opacity: .9;
 }
 
 /* COLORS */
