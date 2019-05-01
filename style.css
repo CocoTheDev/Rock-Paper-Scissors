@@ -114,24 +114,40 @@ a {
 /* BUTTONS GAME */
 button {
   position: absolute;
-  height: 4%;
-  width: 4%;
-  top: 62%;
+  height: 5%;
+  width: 3%;
+  left: 31%;
+  border-left: black solid 2px;
+  border-top: black solid 2px;
+  border-bottom: rgb(226, 179, 24) solid 2px;
+  border-right: rgb(226, 179, 24) solid 2px;
+  opacity: 0.9;
+  transform: rotate(180deg);
+}
+
+button:hover {
+  border-bottom: rgb(47, 61, 255) solid 2px;
+  border-right: rgb(47, 61, 255) solid 2px;
+  
+  opacity: 1;
+}
+
+.power {
+  height: 45%;
+  width: auto;
 }
 
 #rock {
-left: 30%;
+top: 45%;
 }
 
 #paper {
-left: 35%;
+top: 50%;
 }
 
 #scissors {
-left: 40%;
+  top: 55%;
 }
-
-
 
 
 /* BATTLE ZONE */

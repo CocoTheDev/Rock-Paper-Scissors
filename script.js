@@ -16,6 +16,7 @@ document.getElementById("paper").addEventListener("click", function (){ playerSe
 document.getElementById("scissors").addEventListener("click", function (){ playerSelect = "scissors" ; launchGame() })
 
 
+
 function playground () {
   console.log(computerSelect)
   console.log(playerSelect)
