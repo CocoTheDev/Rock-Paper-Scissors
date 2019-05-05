@@ -4,6 +4,7 @@ var playerSelect
 var playerScored = 0
 var computerSelect
 var computerScored = 0
+var finish = false
 
 
 function computerChoice () {
@@ -15,12 +16,16 @@ computerSelect = items[Math.floor(Math.random()*items.length)]
 document.getElementById("paper").style.visibility = "hidden";
 document.getElementById("rock").style.visibility = "hidden";
 document.getElementById("scissors").style.visibility = "hidden";
+var orangePlayer = document.getElementsByClassName("progress-bar-orange-player")[0];
+var redPlayer = document.getElementsByClassName("progress-bar-red-player")[0];
+var orangeIa = document.getElementsByClassName("progress-bar-orange-ia")[0];
+var redIa = document.getElementsByClassName("progress-bar-red-ia")[0];
 var startButton = document.getElementById("start-button"); 
-
+startButton.addEventListener("click", function (){ start () });
 var fightLogo = document.getElementById("fight"); 
 fightLogo.style.visibility = "hidden";
 
-
+// Launch game when items are clicked
 document.getElementById("rock").addEventListener("click", function (){ playerSelect = "rock" ; launchGame() })
 document.getElementById("paper").addEventListener("click", function (){ playerSelect = "paper" ; launchGame() })
 document.getElementById("scissors").addEventListener("click", function (){ playerSelect = "scissors" ; launchGame() })
@@ -28,18 +33,24 @@ document.getElementById("scissors").addEventListener("click", function (){ playe
 
 
 // Fonction when START is pushed
-startButton.addEventListener("click", function (){ 
+function start () {
 
+  playerScored = 0
+  computerScored = 0
+
+  orangePlayer.style.width = '100%';
+  orangeIa.style.width = '100%';
+  redPlayer.style.width = '0%';
+  redIa.style.width = '0%';
 
   fightLogo.style.visibility = "visible"; 
   setTimeout(function(){ fightLogo.style.visibility = "hidden"; }, 500);
-  
   
   document.getElementById("paper").style.visibility = "visible";
   document.getElementById("rock").style.visibility = "visible";
   document.getElementById("scissors").style.visibility = "visible";
 
- })
+ };
 
 
 
@@ -95,40 +106,66 @@ function score() {
 }
 
 
-function launchGame() {
-  computerChoice () ; 
-  displayResult () ;
-  score ();
+function life() {
+  if (computerScored === 1){
+    orangePlayer.style.width = '80%';
+    redPlayer.style.width = '20%';
+  };
+  if (playerScored === 1){
+    orangeIa.style.width = '80%';
+    redIa.style.width = '20%';
+  };
+  
+  if (computerScored === 2){
+    orangePlayer.style.width = '60%';
+    redPlayer.style.width = '40%';
+  };
+  if (playerScored === 2){
+    orangeIa.style.width = '60%';
+    redIa.style.width = '40%';
+  };
+
+  if (computerScored === 3){
+    orangePlayer.style.width = '40%';
+    redPlayer.style.width = '60%';
+  };
+  if (playerScored === 3){
+    orangeIa.style.width = '40%';
+    redIa.style.width = '60%';
+  };
+
+  if (computerScored === 4){
+    orangePlayer.style.width = '20%';
+    redPlayer.style.width = '80%';
+  };
+  if (playerScored === 4){
+    orangeIa.style.width = '20%';
+    redIa.style.width = '80%';
+  };
+
+  if (computerScored === 5){
+    orangePlayer.style.width = '0%';
+    redPlayer.style.width = '100%';
+    finish = true;
+  };
+  if (playerScored === 5){
+    orangeIa.style.width = '0%';
+    redIa.style.width = '100%';
+    finish = true;
+  };
+
 }
 
 
-// // Annimation
-// var tID; //we will use this variable to clear the setInterval()
-
-// function stopAnimate() {
-// clearInterval(tID);
-// } //end of stopAnimate()
-
-// function animateScript() {
-//   var position = 0; //start position for the image slicer
-//   const interval = 300; //100 ms of interval for the setInterval()
-//   const diff = 102.4;     //diff as a variable for position offset
-//   tID = setInterval ( () => {
-//   document.getElementById("image").style.backgroundPosition = 
-//   `-${position}px 0px`; 
-// //we use the ES6 template literal to insert the variable "position"
-//   if (position < 1024)
-//   { position = position + diff;}
-// //we increment the position by 256 each time
-//   else
-//   { position = 0; }
-// //reset the position to 256px, once position exceeds 1536px
-// }
-//   , interval ); //end of setInterval
-// } //end of animateScript()
+function launchGame() {
+  computerChoice () ; 
+  displayResult () ;
+  life() ;
+  score () ;
+  if ( finish == true ) { start() ; finish = false } ;
+}
 
 
-// LIFE BARRE
 
 
 

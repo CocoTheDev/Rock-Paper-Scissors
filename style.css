@@ -186,12 +186,22 @@ button:hover {
 }
 
 /* LIFE BAR */
-.progress-bar-orange{
+.progress-bar-orange-player{
   background-color: rgb(255, 238, 0);
   width: 95% ;
 }
 
-.progress-bar-red{
+.progress-bar-red-player{
+  background-color: rgb(255, 0, 0) ;
+  width: 5% ;
+}
+
+.progress-bar-orange-ia{
+  background-color: rgb(255, 238, 0);
+  width: 95% ;
+}
+
+.progress-bar-red-ia{
   background-color: rgb(255, 0, 0) ;
   width: 5% ;
 }
