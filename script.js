@@ -11,10 +11,35 @@ computerSelect = items[Math.floor(Math.random()*items.length)]
 }
 
 
+// Elements 
+document.getElementById("paper").style.visibility = "hidden";
+document.getElementById("rock").style.visibility = "hidden";
+document.getElementById("scissors").style.visibility = "hidden";
+var startButton = document.getElementById("start-button"); 
+
+var fightLogo = document.getElementById("fight"); 
+fightLogo.style.visibility = "hidden";
+
+
 document.getElementById("rock").addEventListener("click", function (){ playerSelect = "rock" ; launchGame() })
 document.getElementById("paper").addEventListener("click", function (){ playerSelect = "paper" ; launchGame() })
 document.getElementById("scissors").addEventListener("click", function (){ playerSelect = "scissors" ; launchGame() })
-document.getElementById("start-button").addEventListener("click", function (){  })
+
+
+
+// Fonction when START is pushed
+startButton.addEventListener("click", function (){ 
+
+
+  fightLogo.style.visibility = "visible"; 
+  setTimeout(function(){ fightLogo.style.visibility = "hidden"; }, 500);
+  
+  
+  document.getElementById("paper").style.visibility = "visible";
+  document.getElementById("rock").style.visibility = "visible";
+  document.getElementById("scissors").style.visibility = "visible";
+
+ })
 
 
 
