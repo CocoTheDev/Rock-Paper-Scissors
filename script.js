@@ -14,6 +14,7 @@ computerSelect = items[Math.floor(Math.random()*items.length)]
 document.getElementById("rock").addEventListener("click", function (){ playerSelect = "rock" ; launchGame() })
 document.getElementById("paper").addEventListener("click", function (){ playerSelect = "paper" ; launchGame() })
 document.getElementById("scissors").addEventListener("click", function (){ playerSelect = "scissors" ; launchGame() })
+document.getElementById("start-button").addEventListener("click", function (){  })
 
 
 

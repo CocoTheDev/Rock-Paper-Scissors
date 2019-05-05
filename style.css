@@ -219,6 +219,12 @@ button:hover {
   opacity: .9;
 }
 
+.fight {
+  position: absolute;
+  top: 35%;
+  left: 18%;
+}
+
 /* COLORS */
 .grey-with-red {
   color: rgb(192, 192, 192) !important;
