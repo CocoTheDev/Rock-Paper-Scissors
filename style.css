@@ -1,7 +1,4 @@
 
-.final_result {
-  font-weight: 1000;
-}
 
 .splash-screen {
   width: 100%;
@@ -42,6 +39,7 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
 footer::-webkit-textfield-decoration-container {
   position: absolute;
   bottom: 0;
@@ -83,6 +81,24 @@ footer::-webkit-textfield-decoration-container {
   position: fixed;
   position: absolute;
   right: 0;
+}
+
+.modal-back {
+  background-color: black !important;
+  background: repeating-linear-gradient(#0D122B, #0D122B 2px, #565B73 2px, #565B73 4px) !important;
+  opacity: .9;
+}
+
+.fight {
+  position: absolute;
+  top: 35%;
+  left: 18%;
+}
+
+.end {
+  position: absolute;
+  top: 10%;
+  left: 18%;
 }
 
 
@@ -176,6 +192,7 @@ button:hover {
   left: 58%;
 }
 
+
 /* LADDER */
 .ranked {
   width: auto !important;
@@ -185,27 +202,30 @@ button:hover {
   border: solid 6px;
 }
 
+
 /* LIFE BAR */
 .progress-bar-orange-player{
   background-color: rgb(255, 238, 0);
-  width: 95% ;
+  width: 100% ;
 }
 
 .progress-bar-red-player{
   background-color: rgb(255, 0, 0) ;
-  width: 5% ;
+  width: 0% ;
 }
 
 .progress-bar-orange-ia{
   background-color: rgb(255, 238, 0);
-  width: 95% ;
+  width: 100% ;
 }
 
 .progress-bar-red-ia{
   background-color: rgb(255, 0, 0) ;
-  width: 5% ;
+  width: 0% ;
 }
 
+
+/* K.O */
 .ko-box {
   position: absolute ;
   Top: 34.7%;
@@ -223,17 +243,6 @@ button:hover {
   width: 100% ;
 }
 
-.modal-back {
-  background-color: black !important;
-  background: repeating-linear-gradient(#0D122B, #0D122B 2px, #565B73 2px, #565B73 4px) !important;
-  opacity: .9;
-}
-
-.fight {
-  position: absolute;
-  top: 35%;
-  left: 18%;
-}
 
 /* COLORS */
 .grey-with-red {
