@@ -171,6 +171,5 @@ function launchGame() {
   if ( finish == true ) { 
     timer = setTimeout(function(){ start() }, 3000) ; 
     finish = false ;
-    allButtons.addEventListener("click", start() );
   } ;
 }
