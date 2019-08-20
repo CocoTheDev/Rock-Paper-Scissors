@@ -1,11 +1,11 @@
 
-var items = ["rock","paper","scissors"]
-var playerSelect
-var playerScored = 0
-var computerSelect
-var computerScored = 0
-var finish = false
-var timer;
+let items = ["rock","paper","scissors"]
+let playerSelect
+let playerScored = 0
+let computerSelect
+let computerScored = 0
+let finish = false
+let timer;
 
 
 function computerChoice () {
@@ -15,21 +15,21 @@ computerSelect = items[Math.floor(Math.random()*items.length)]
 
 
 // Elements 
-var paper = document.getElementById("paper");
-var rock = document.getElementById("rock");
-var scissors = document.getElementById("scissors");
+let paper = document.getElementById("paper");
+let rock = document.getElementById("rock");
+let scissors = document.getElementById("scissors");
 paper.style.visibility = "hidden";
 rock.style.visibility = "hidden";
 scissors.style.visibility = "hidden";
-var allButtons = [rock,paper,scissors];
+let allButtons = [rock,paper,scissors];
 
-var orangePlayer = document.getElementsByClassName("progress-bar-orange-player")[0];
-var redPlayer = document.getElementsByClassName("progress-bar-red-player")[0];
-var orangeIa = document.getElementsByClassName("progress-bar-orange-ia")[0];
-var redIa = document.getElementsByClassName("progress-bar-red-ia")[0];
-var startButton = document.getElementById("start-button"); 
+let orangePlayer = document.getElementsByClassName("progress-bar-orange-player")[0];
+let redPlayer = document.getElementsByClassName("progress-bar-red-player")[0];
+let orangeIa = document.getElementsByClassName("progress-bar-orange-ia")[0];
+let redIa = document.getElementsByClassName("progress-bar-red-ia")[0];
+let startButton = document.getElementById("start-button"); 
 startButton.addEventListener("click", function (){ start () });
-var fightLogo = document.getElementById("fight"); 
+let fightLogo = document.getElementById("fight"); 
 fightLogo.style.visibility = "hidden";
 
 
